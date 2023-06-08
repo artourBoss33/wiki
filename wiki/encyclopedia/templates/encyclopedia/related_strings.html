@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Related Results
+{% endblock %}
+
+{% block body %}
+    <h1>You might be looking for:</h1>
+    <br>
+    <ul>
+        {% for entry in entries %}
+            <li><a href="wiki/{{ entry }}">{{ entry }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
